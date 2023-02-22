@@ -76,6 +76,7 @@ data "aws_vpcs" "all_vpcs" {
     tags = {
         repo-name = "sentinel-terraform-repo"
     }
+}
 
 output "sentinel_vpc_ids" {
     value = data.all_vpcs.ids 
