@@ -71,6 +71,15 @@ data "aws_vpc" "vpc4" {
 data "aws_vpc" "vpc5" {
   id = aws_vpc.main5.id
 }
+
+data "aws_vpcs" "all_vpcs" {
+    tags = {
+        repo-name = "sentinel-terraform-repo"
+    }
+
+output "sentinel_vpc_ids" {
+    value = data.all_vpcs.ids 
+}
 #----------------------------------------------------------------#
 ##             Creating Flow Logs for VPCS 1,3,5                ##
 #----------------------------------------------------------------#
