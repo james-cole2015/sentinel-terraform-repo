@@ -49,27 +49,27 @@ resource "aws_vpc" "main5" {
 #----------------------------------------------------------------#
 
 data "aws_vpc" "vpc0" {
-  id = aws_vpc.main.vpc_id
+  id = aws_vpc.main.id
 }
 
 data "aws_vpc" "vpc1" {
-  id = aws_vpc.main1.vpc_id
+  id = aws_vpc.main1.id
 }
 
 data "aws_vpc" "vpc2" {
-  id = aws_vpc.main2.vpc_id
+  id = aws_vpc.main2.id
 }
 
 data "aws_vpc" "vpc3" {
-  id = aws_vpc.main3.vpc_id
+  id = aws_vpc.main3.id
 }
 
 data "aws_vpc" "vpc4" {
-  id = aws_vpc.main4.vpc_id
+  id = aws_vpc.main4.id
 }
 
 data "aws_vpc" "vpc5" {
-  id = aws_vpc.main5.vpc_id
+  id = aws_vpc.main5.id
 }
 #----------------------------------------------------------------#
 ##             Creating Flow Logs for VPCS 1,3,5                ##
