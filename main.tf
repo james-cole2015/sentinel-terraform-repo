@@ -35,7 +35,7 @@ resource "aws_vpc" "main4" {
 
 resource "aws_vpc" "main5" {
     cidr_block = "15.0.0.0/24"
-    tags = 
+    tags = {
         Name = VPC05
     }
 }
