@@ -79,7 +79,7 @@ data "aws_vpcs" "all_vpcs" {
 }
 
 output "sentinel_vpc_ids" {
-    value = data.all_vpcs.ids 
+    value = all_vpcs.ids 
 }
 #----------------------------------------------------------------#
 ##             Creating Flow Logs for VPCS 1,3,5                ##
