@@ -75,21 +75,21 @@ data "aws_vpc" "vpc5" {
 ##             Creating Flow Logs for VPCS 1,3,5                ##
 #----------------------------------------------------------------#
 
-resource "aws_flow_log" "flow_logs_example" {
+resource "aws_flow_log" "flow_logs_example1" {
   iam_role_arn = aws_iam_role.example.arn
   log_destination = aws_cloudwatch_log_group.example.arn
   traffic_type = "ALL"
   vpc_id = aws_vpc.main1.id
 }
 
-resource "aws_flow_log" "flow_logs_example" {
+resource "aws_flow_log" "flow_logs_example3" {
   iam_role_arn = aws_iam_role.example.arn
   log_destination = aws_cloudwatch_log_group.example.arn
   traffic_type = "ALL"
   vpc_id = aws_vpc.main3.id
 }
 
-resource "aws_flow_log" "flow_logs_example" {
+resource "aws_flow_log" "flow_logs_example5" {
   iam_role_arn = aws_iam_role.example.arn
   log_destination = aws_cloudwatch_log_group.example.arn
   traffic_type = "ALL"
